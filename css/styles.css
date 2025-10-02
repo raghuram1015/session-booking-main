@@ -119,8 +119,8 @@ body {
 }
 
 .btn-secondary {
-  background-color: transparent;
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
   padding: 10px 24px;
   border-radius: 8px;
   text-decoration: none;
@@ -133,8 +133,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--primary-hover);
 }
 
 .btn-large {
