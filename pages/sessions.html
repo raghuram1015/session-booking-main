@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Sessions - SessionHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/sessions.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SessionHub</div>
+            <div class="nav-links" id="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="sessions.html" class="active">Browse Sessions</a>
+                <a href="my-bookings.html">My Bookings</a>
+                <a href="my-sessions.html" id="my-sessions-link" style="display: none;">My Sessions</a>
+                <a href="profile.html">Profile</a>
+                <button id="logout-btn" class="btn-danger">Logout</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding: 40px 20px;">
+        <div class="page-header">
+            <h1>Browse Sessions</h1>
+            <p>Discover and book expert sessions</p>
+        </div>
+
+        <div class="filters">
+            <select id="category-filter" class="filter-select">
+                <option value="">All Categories</option>
+                <option value="Technology">Technology</option>
+                <option value="Business">Business</option>
+                <option value="Design">Design</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Health">Health</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div id="sessions-grid" class="sessions-grid">
+            <p class="empty-state">Loading sessions...</p>
+        </div>
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/sessions.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

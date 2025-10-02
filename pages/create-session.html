@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Session - SessionHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SessionHub</div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="sessions.html">Browse Sessions</a>
+                <a href="my-bookings.html">My Bookings</a>
+                <a href="my-sessions.html" id="my-sessions-link">My Sessions</a>
+                <a href="profile.html">Profile</a>
+                <button id="logout-btn" class="btn-danger">Logout</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding: 40px 20px;">
+        <div class="auth-box" style="max-width: 700px; margin: 0 auto;">
+            <div class="auth-header">
+                <h2>Create New Session</h2>
+                <p>Share your expertise with others</p>
+            </div>
+
+            <form id="create-session-form" class="auth-form">
+                <div class="form-group">
+                    <label for="title">Session Title</label>
+                    <input type="text" id="title" name="title" placeholder="e.g., Introduction to Web Development" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="Describe what participants will learn" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Business">Business</option>
+                        <option value="Design">Design</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Health">Health</option>
+                        <option value="Education">Education</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="duration">Duration (minutes)</label>
+                        <input type="number" id="duration" name="duration" placeholder="60" min="15" step="15" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price ($)</label>
+                        <input type="number" id="price" name="price" placeholder="50" min="0" step="5" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="maxBookings">Max Participants</label>
+                    <input type="number" id="maxBookings" name="maxBookings" placeholder="10" min="1" max="100" required>
+                </div>
+
+                <div id="error-message" class="error-message"></div>
+                <div id="success-message" class="success-message"></div>
+
+                <button type="submit" class="btn-primary btn-full">Create Session</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/sessions.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

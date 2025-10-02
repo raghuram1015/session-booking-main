@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - SessionHub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/sessions.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SessionHub</div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="sessions.html">Browse Sessions</a>
+                <a href="my-bookings.html" class="active">My Bookings</a>
+                <a href="my-sessions.html" id="my-sessions-link" style="display: none;">My Sessions</a>
+                <a href="profile.html">Profile</a>
+                <button id="logout-btn" class="btn-danger">Logout</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding: 40px 20px;">
+        <div class="page-header">
+            <div>
+                <h1>My Bookings</h1>
+                <p>View and manage your session bookings</p>
+            </div>
+        </div>
+
+        <div class="bookings-tabs">
+            <button class="tab-btn active" data-tab="upcoming">Upcoming</button>
+            <button class="tab-btn" data-tab="past">Past</button>
+        </div>
+
+        <div id="upcoming-bookings" class="bookings-container">
+            <p class="empty-state">Loading your bookings...</p>
+        </div>
+
+        <div id="past-bookings" class="bookings-container" style="display: none;">
+            <p class="empty-state">Loading your bookings...</p>
+        </div>
+    </div>
+
+    <script type="module" src="../js/firebase-config.js"></script>
+    <script type="module" src="../js/auth.js"></script>
+    <script type="module" src="../js/bookings.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
