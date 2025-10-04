@@ -70,5 +70,20 @@
     </footer>
 
     <script type="module" src="js/main.js"></script>
+
+    <script type="module">
+        import { auth } from './js/firebase-config.js';
+        import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        onAuthStateChanged(auth, (user) => {
+            const browseButtons = document.querySelectorAll('a[href="pages/sessions.html"]');
+            if (!user) {
+                // If user is not logged in, change the links to point to the login page
+                browseButtons.forEach(button => {
+                    button.href = 'pages/login.html';
+                });
+            }
+        });
+    </script>
 </body>
 </html>

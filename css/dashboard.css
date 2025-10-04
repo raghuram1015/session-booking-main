@@ -69,6 +69,7 @@
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   text-decoration: none;
+  color: var(--text-primary);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }

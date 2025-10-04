@@ -68,7 +68,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--bg-primary);
+  color: white;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -133,6 +133,7 @@ body {
 
 .btn-secondary:hover {
   background-color: var(--primary-hover);
+  color: white;
 }
 
 .btn-large {

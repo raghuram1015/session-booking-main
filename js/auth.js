@@ -23,6 +23,8 @@ onAuthStateChanged(auth, async (user) => {
       "my-bookings.html",
       "create-session.html",
       "my-sessions.html",
+      "sessions.html",
+      "session-detail.html",
     ]
     const currentPage = window.location.pathname
     if (protectedPages.some((page) => currentPage.includes(page))) {
