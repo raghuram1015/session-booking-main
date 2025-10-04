@@ -69,7 +69,6 @@
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   text-decoration: none;
-  color: var(--text-primary);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }
@@ -162,6 +161,75 @@
   color: var(--text-secondary);
   padding: 32px;
   font-size: 14px;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--bg-primary);
+  padding: 48px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.modal-content p {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.role-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.role-options button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+}
+
+.role-options button small {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Added logout button styles */
+#logout-btn {
+  margin-left: 12px;
+  padding: 8px 20px;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#logout-btn:hover {
+  opacity: 0.9;
 }
 
 /* Responsive */

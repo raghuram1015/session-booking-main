@@ -20,6 +20,11 @@ async function loadProfile() {
       document.getElementById("my-sessions-link").style.display = "block"
     }
 
+    const profileUserName = document.getElementById("profile-user-name")
+    if (profileUserName) {
+      profileUserName.textContent = userProfile.name
+    }
+
     // Populate form
     document.getElementById("name").value = userProfile.name || ""
     document.getElementById("email").value = userProfile.email || ""
